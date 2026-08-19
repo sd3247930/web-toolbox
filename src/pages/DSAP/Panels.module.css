@@ -1,0 +1,150 @@
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.complexity {
+  font-size: 0.8rem;
+  color: var(--text-sub);
+  background: var(--primary-light);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+/* 柱状图 */
+.bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  height: 200px;
+  padding: 8px 4px 0;
+}
+.barCol {
+  flex: 1;
+  max-width: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+.bar {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  background: #93c5fd;
+  transition: height 0.15s, background 0.15s;
+}
+.bar.compare {
+  background: #f87171;
+}
+.bar.swap {
+  background: #fbbf24;
+}
+.bar.sorted {
+  background: #86efac;
+}
+.bar.range {
+  background: #93c5fd;
+  opacity: 0.55;
+}
+.bar.mid {
+  background: #c084fc;
+}
+.bar.found {
+  background: #34d399;
+}
+.barVal {
+  font-size: 0.7rem;
+  color: var(--text-sub);
+  margin-bottom: 2px;
+}
+.barIdx {
+  font-size: 0.62rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+.msg {
+  margin-top: 12px;
+  font-size: 0.88rem;
+  color: var(--text-main);
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 8px 12px;
+  min-height: 22px;
+}
+
+/* 图遍历 */
+.graphSvg {
+  width: 100%;
+  max-height: 260px;
+  background: #fbfcfe;
+  border-radius: 10px;
+}
+.edge {
+  stroke: #cbd5e1;
+  stroke-width: 2;
+}
+.node {
+  fill: #e2e8f0;
+  stroke: #94a3b8;
+  stroke-width: 2;
+}
+.nodeVisited {
+  fill: #86efac;
+  stroke: #16a34a;
+}
+.nodeCurrent {
+  fill: #f87171;
+  stroke: #dc2626;
+  stroke-width: 3;
+}
+.nodeFrontier {
+  fill: #fcd34d;
+  stroke: #d97706;
+}
+.nodeText {
+  fill: #1e293b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* 图例 */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: var(--text-sub);
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-right: 5px;
+  vertical-align: -1px;
+}
+.dCompare { background: #f87171; }
+.dSwap { background: #fbbf24; }
+.dSorted { background: #86efac; }
+.dRange { background: #93c5fd; }
+.dMid { background: #c084fc; }
+.dFound { background: #34d399; }
+.dCurrent { background: #f87171; }
+.dVisited { background: #86efac; }
+.dFrontier { background: #fcd34d; }
+.tip {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+@media (max-width: 640px) {
+  .bars {
+    height: 160px;
+  }
+}

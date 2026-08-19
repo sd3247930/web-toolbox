@@ -1,0 +1,72 @@
+.snippetRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.editorRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.editorCol {
+  min-width: 0;
+}
+.colTitle {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-sub);
+  margin-bottom: 6px;
+}
+.editor {
+  width: 100%;
+  min-height: 220px;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  font-size: 0.82rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  background: #0f172a;
+  color: #d7e2f0;
+  resize: vertical;
+  line-height: 1.6;
+}
+.output {
+  min-height: 220px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Cascadia Code', Consolas, monospace;
+  font-size: 0.82rem;
+  overflow: auto;
+  max-height: 320px;
+}
+.empty {
+  color: var(--text-light);
+}
+.line {
+  padding: 2px 0;
+  border-bottom: 1px dashed #eef2f6;
+}
+.error {
+  color: var(--red);
+  font-weight: 600;
+  padding: 6px 0;
+}
+.time {
+  color: var(--text-light);
+  font-size: 0.75rem;
+  padding-top: 6px;
+}
+.expect {
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  margin-top: 8px;
+}
+
+@media (max-width: 720px) {
+  .editorRow {
+    grid-template-columns: 1fr;
+  }
+}

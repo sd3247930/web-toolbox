@@ -1,0 +1,128 @@
+.header {
+  margin-bottom: 14px;
+}
+.h1 {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sub {
+  color: var(--text-sub);
+  font-size: 0.9rem;
+  border-left: 4px solid var(--primary);
+  padding-left: 12px;
+  margin-top: 6px;
+}
+.formRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+.formGroup {
+  flex: 1;
+  min-width: 140px;
+}
+.label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+.listHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.item {
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-left: 5px solid #94a3b8;
+}
+.itemWarning {
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+}
+.itemUrgent {
+  border-left-color: #ef4444;
+  background: #fef2f2;
+}
+.info {
+  flex: 3;
+  min-width: 140px;
+}
+.name {
+  font-weight: 700;
+}
+.date {
+  font-size: 0.8rem;
+  color: var(--text-sub);
+}
+.status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+}
+.warning {
+  background: #fed7aa;
+  color: #9a3412;
+}
+.urgent {
+  background: #fecaca;
+  color: #991b1b;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+}
+.smallBtn {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  border: none;
+  background: #e2e8f0;
+  color: var(--text-main);
+  cursor: pointer;
+  font-family: inherit;
+}
+.del {
+  background: #fecaca;
+  color: #991b1b;
+}
+.note {
+  font-size: 0.7rem;
+  text-align: center;
+  color: var(--text-light);
+  margin-top: 14px;
+}
+
+@media (max-width: 550px) {
+  .formRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .actions {
+    align-self: flex-end;
+  }
+}

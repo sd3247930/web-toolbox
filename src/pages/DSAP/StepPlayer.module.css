@@ -1,0 +1,65 @@
+.stage {
+  min-height: 260px;
+  background: #fbfcfe;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+.speedWrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+.speedLabel {
+  font-size: 0.78rem;
+  color: var(--text-sub);
+}
+.slider {
+  width: 110px;
+  accent-color: var(--primary);
+}
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.progressBar {
+  flex: 1;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--border);
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.15s;
+}
+.progressText {
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 640px) {
+  .stage {
+    min-height: 200px;
+    padding: 10px;
+  }
+  .speedWrap {
+    margin-left: 0;
+    width: 100%;
+  }
+}

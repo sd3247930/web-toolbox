@@ -1,0 +1,17 @@
+.footer {
+  border-top: 1px solid var(--border);
+  background: #fff;
+  padding: 18px 16px;
+}
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+.tip {
+  margin-top: 4px;
+  color: var(--text-sub);
+}

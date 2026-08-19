@@ -1,0 +1,269 @@
+.header {
+  margin-bottom: 14px;
+}
+.h1 {
+  font-size: 1.6rem;
+}
+.sub {
+  color: var(--text-sub);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+.userCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+}
+.avatar {
+  font-size: 26px;
+  background: var(--primary-light);
+  color: var(--primary);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.userName {
+  font-weight: 700;
+}
+.userSub {
+  font-size: 12px;
+  color: var(--text-sub);
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.funcCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  flex: 1 1 calc(50% - 12px);
+  min-width: 130px;
+  transition: 0.15s;
+}
+.funcCard:active {
+  transform: scale(0.97);
+}
+.fullRow {
+  flex: 1 1 100%;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  text-align: left;
+}
+.funcIcon {
+  font-size: 28px;
+}
+.funcLabel {
+  font-size: 15px;
+  font-weight: 700;
+}
+.funcDesc {
+  font-size: 11px;
+  color: var(--text-light);
+  text-align: center;
+}
+.randPicker {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 6px;
+}
+.randPicker button {
+  white-space: nowrap;
+}
+.typeRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* 答题 */
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--text-sub);
+  padding: 8px 2px;
+}
+.pgBar {
+  flex: 1;
+  height: 5px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.pgFill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.3s;
+}
+.count {
+  font-weight: 600;
+  color: var(--text-main);
+}
+.timer {
+  text-align: center;
+  color: var(--red);
+  font-weight: 700;
+  padding: 6px 0;
+}
+.qCard {
+  padding: 16px;
+}
+.qType {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.single {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.multi {
+  background: var(--orange-bg);
+  color: var(--orange);
+}
+.bool {
+  background: var(--green-bg);
+  color: var(--green);
+}
+.qStem {
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.opts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  background: #fafbfc;
+  transition: 0.15s;
+}
+.opt:active {
+  transform: scale(0.98);
+}
+.optSelected {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+.optCorrect {
+  border-color: var(--green);
+  background: var(--green-bg);
+}
+.optWrong {
+  border-color: var(--red);
+  background: var(--red-bg);
+}
+.optMarker {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-sub);
+  background: #f0f2f5;
+  flex-shrink: 0;
+}
+.optSelected .optMarker {
+  background: var(--primary);
+  color: #fff;
+}
+.optCorrect .optMarker {
+  background: var(--green);
+  color: #fff;
+}
+.optWrong .optMarker {
+  background: var(--red);
+  color: #fff;
+}
+.feedback {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+}
+.feedbackGood {
+  background: var(--green-bg);
+  color: #166534;
+  border: 1px solid var(--green);
+}
+.feedbackBad {
+  background: var(--red-bg);
+  color: #991b1b;
+  border: 1px solid var(--red);
+}
+.explanation {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text-sub);
+}
+.examBtns {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.examBtns .btn-primary {
+  flex: 1;
+}
+
+/* 弹窗 */
+.modalMask {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal {
+  background: var(--card);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 360px;
+  padding: 24px 20px;
+}
+.pageHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
