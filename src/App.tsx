@@ -1,4 +1,5 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import InstallPrompt from './components/InstallPrompt'
@@ -18,6 +19,17 @@ import DebuggingPage from './pages/Debugging/DebuggingPage'
  *   /debug  调试刷题（Debugging-skills）
  */
 export default function App() {
+  const navigate = useNavigate()
+
+  // 处理 GitHub Pages 深链：从 404.html 的 sessionStorage 恢复目标路由
+  useEffect(() => {
+    const redirect = sessionStorage.getItem('redirect')
+    if (redirect) {
+      sessionStorage.removeItem('redirect')
+      navigate(redirect, { replace: true })
+    }
+  }, [navigate])
+
   return (
     <div className="app-shell">
       <NavBar />
