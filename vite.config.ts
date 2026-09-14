@@ -38,7 +38,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
         // SPA 路由回退到 index.html，保证离线访问任意路由都可用
         navigateFallback: `${base}index.html`,
-        navigateFallbackDenylist: [/^\/api\//],
+        navigateFallbackDenylist: [new RegExp(`^${base}api/`)],
       },
     }),
   ],
