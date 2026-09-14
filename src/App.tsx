@@ -2,7 +2,7 @@ import { Routes, Route, Navigate, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
-import InstallPrompt from './components/InstallPrompt'
+import InstallGuide from './components/InstallGuide'
 import HomePage from './pages/Home/HomePage'
 import PwaPage from './pages/PWA/PwaPage'
 import DSAPPage from './pages/DSAP/DSAPPage'
@@ -45,7 +45,8 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-      <InstallPrompt />
+      {/* 安装引导：按品牌/浏览器给出「安装应用 / 添加到主屏幕」的差异化步骤 */}
+      <InstallGuide />
     </div>
   )
 }

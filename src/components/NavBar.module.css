@@ -14,6 +14,26 @@
   gap: 16px;
   padding: 10px 16px;
 }
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.installBtn {
+  border: 1px solid var(--primary);
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.installBtn:hover {
+  filter: brightness(0.97);
+}
 .brand {
   font-weight: 800;
   font-size: 1.05rem;
