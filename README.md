@@ -138,3 +138,11 @@ merged-webapp/
 - DSAP 与 Debugging 仓库内容完全相同（同一文件哈希），为满足"DSAP 展示算法"的要求，DSAP 模块为新建实现；
 - radio-exam 的视频与二维码：视频改为占位地址；二维码分享改为复制链接/Web Share；
 - 题库中的多选种子题仅 2 道、判断 2 道、单选 12 道，其余为"编号后缀"扩充，与原仓库逻辑一致。
+
+---
+
+## 相关仓库
+
+- [device-verify](https://github.com/sd3247930/device-verify)：设备校验提醒器的**独立版**（独立 PWA + Android APK WebView 壳，APK 固定名直链下载）
+  - 单独成站的原因：本工具集的 Service Worker 会把 `/web-toolbox/` 作用域下所有子路径导航回退到工具集首页，无法在内嵌一个独立应用
+  - 两者同在 `sd3247930.github.io` 源下，浏览器的 localStorage 可共享；**APK 内的存储与浏览器隔离**，数据需用「导出/导入设备清单」迁移
